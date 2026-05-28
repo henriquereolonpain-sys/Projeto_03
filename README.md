@@ -24,6 +24,10 @@ Os notebooks são executados em sequência via Databricks Workflow:
 
 ![Workflow](images/Run.png)
 
+&
+
+![Job](images/Job.png)
+
 ## Outputs
 
 ### Gold 1 — Faturamento Mensal
