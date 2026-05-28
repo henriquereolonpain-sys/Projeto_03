@@ -44,3 +44,5 @@ Os notebooks são executados em sequência via Databricks Workflow:
 - PySpark
 - Delta Lake
 - Unity Catalog (Volumes)
+
+#### Obs: Minha primeira experiência com o databricks e fiquei surpreso com a quantidade funcionalidades, pretendo me aprofundar mais na plataforma no futuro 🐞
