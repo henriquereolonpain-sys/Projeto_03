@@ -2,6 +2,11 @@
 
 Pipeline de dados construído no Databricks Community Edition como parte do desafio da Comunidados,
 simulando o ambiente de engenharia de dados de um e-commerce de produtos eletrônicos e móveis (TechVenda).
+Os objetivos eram responder as perguntas:
+- Qual o faturamento total por mês em 2024?
+- Quais vendedores geraram mais receita?
+- Quais os produtos mais vendidos por categoria?
+- Qual a taxa de cancelamento de pedidos?
 
 ## Arquitetura
 
@@ -11,11 +16,27 @@ A solução segue o padrão Medallion com três camadas:
 - **Silver** — Limpeza, tipagem, joins entre tabelas e cálculo de valor por item com desconto
 - **Gold** — Visões analíticas agregadas para responder perguntas de negócio
 
-## Visões Analíticas (Gold)
+## Orquestração
 
-- Faturamento mensal em 2024
-- Ranking de vendedores por receita gerada
-- Top 3 produtos por categoria (via Window Function)
+Os notebooks são executados em sequência via Databricks Workflow:
+
+`Bronze → Silver → Gold`
+
+![Workflow](images/Run.png)
+
+## Outputs
+
+### Gold 1 — Faturamento Mensal
+![Faturamento Mensal](images/Faturamento%20Mensal.png)
+
+### Gold 2 — Ranking de Vendedores
+![Ranking de Vendedores](images/Ranking%20de%20vendedores.png)
+
+### Gold 3 — Top Produtos por Categoria
+![Top Produtos por Categoria](images/Top%20produtos%20por%20categoria.png)
+
+### Gold 4 — Taxa de Cancelamento de Pedidos
+![Taxa de Cancelamento](images/Cancelamentos.png)
 
 ## Tecnologias
 
@@ -23,16 +44,3 @@ A solução segue o padrão Medallion com três camadas:
 - PySpark
 - Delta Lake
 - Unity Catalog (Volumes)
-
-## Orquestração
-
-Os notebooks são executados em sequência via Databricks Workflow:
-`Bronze → Silver → Gold`
-
-## Estrutura
-
-```
-├── Bronze.ipynb
-├── Silver.ipynb
-└── Gold.ipynb
-```
