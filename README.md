@@ -42,6 +42,9 @@ Os notebooks são executados em sequência via Databricks Workflow:
 ### Gold 4 — Taxa de Cancelamento de Pedidos
 ![Taxa de Cancelamento](images/Cancelamentos.png)
 
+### Dashboard!!
+![Showcase](images/Dashboard.png)
+
 ## Tecnologias
 
 - Databricks Community Edition
