@@ -1,4 +1,4 @@
-# Projeto_03 — Lakehouse com Arquitetura Medallion
+# Projeto_03 Lakehouse com Arquitetura Medallion
 
 Pipeline de dados construído no Databricks Community Edition como parte do desafio da Comunidados,
 simulando o ambiente de engenharia de dados de um e-commerce de produtos eletrônicos e móveis (TechVenda).
